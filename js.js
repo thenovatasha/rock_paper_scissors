@@ -40,23 +40,23 @@ function game() {
         let resultOfRound = playRound(getPlayerChoice(), getComputerChoice());
         if (resultOfRound === 1) {
 
-            return ++playerScore;
+            playerScore++;
         } 
         else if (resultOfRound == 0) {
-            return ++computerScore;
+            computerScore++;
         }
         else {
-            return ++draw;
+             draw++;
         }
     };
 
- //if (playerScore > computerScore) {
- //   console.log(`Player Wins, Score is ${playerScore} to ${computerScore} and Draws: ${draw}`);
- //}
- //else if(computerScore > playerScore) {
- //   console.log(`Computer Wins, Score is ${computerScore} to ${PlayerScore} and Draws: ${draw}`);
- //}
- //else {
- //   console.log(`DRAW!, SCORE: PLAYER: ${playerScore}, COMPUTER: ${computerScore}, DRAW: ${draw}`);
- //}
+ if (playerScore > computerScore) {
+    console.log(`Player Wins, Score is ${playerScore} to ${computerScore} and Draws: ${draw}`);
+ }
+ else if(computerScore > playerScore) {
+    console.log(`Computer Wins, Score is ${computerScore} to ${playerScore} and Draws: ${draw}`);
+ }
+ else {
+    console.log(`DRAW!, SCORE: PLAYER: ${playerScore}, COMPUTER: ${computerScore}, DRAW: ${draw}`);
+ }
 };
